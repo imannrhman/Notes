@@ -109,10 +109,12 @@ public class UbahNote extends Fragment {
             });
 
         }   else if (action.equals("Ubah")){
+
             final DatabaseHelper db = new DatabaseHelper(context);
             final Notes notes = new Notes();
             edtJudul.setText(currentNotes.getJudul());
             edtDeskripsi.setText(currentNotes.getDeskripsi());
+            btnAction.setText("Update");
             btnAction.setOnClickListener(
                     new View.OnClickListener() {
                         @Override
